@@ -6,7 +6,7 @@
 		<style>
 			/*Para colorear la tabla desde el html */
 			table caption{
-				background-color: silver;
+				background-color: white;
 			}
 			table, td {
 				background-color: white;
