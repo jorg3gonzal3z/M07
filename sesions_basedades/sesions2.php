@@ -69,9 +69,9 @@
         
         <h3>Actualizar contraseña</h3>
 
-        <label>Usuario</label> <input type="text" size="30" maxlength="100" name="updateusu" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_REQUEST["updateusu"];?>" required /><span class="errornom"><?=$errornom;?></span><br /><br />
+        <label>Usuario:</label> <input type="text" size="30" maxlength="100" name="updateusu" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_REQUEST["updateusu"];?>" required /><span class="errornom"><?=$errornom;?></span><br /><br />
 
-        <label>Nueva Contrasena</label> <input type="text" size="30" maxlength="100" name="updatepasswd" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_REQUEST["updatepasswd"];?>" required /><span class="errorpasswd"><?=$errorpasswd;?></span><br /><br />
+        <label>Nueva Contraseña:</label> <input type="text" size="30" maxlength="100" name="updatepasswd" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_REQUEST["updatepasswd"];?>" required /><span class="errorpasswd"><?=$errorpasswd;?></span><br /><br />
 
         <button id="mysubmit" type="submit">Update Usuario</button><br /><br />
 

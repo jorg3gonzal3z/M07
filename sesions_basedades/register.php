@@ -61,9 +61,9 @@
         <h3>Creacion de Usuario</h3>
         <form action="register.php" method="post" id="myform" name="myform">
 
-            <label>Nuevo Usuario</label> <input type="text" size="30" maxlength="100" name="nouusuari" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_REQUEST["nouusuari"];?>" required /><span class="errornom"><?=$errornom;?></span><br /><br />
+            <label>Nuevo Usuario:</label> <input type="text" size="30" maxlength="100" name="nouusuari" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_REQUEST["nouusuari"];?>" required /><span class="errornom"><?=$errornom;?></span><br /><br />
 
-            <label>Nueva Contrasena</label> <input type="text" size="30" maxlength="100" name="novacontrasena" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_REQUEST["novacontrasena"];?>" required /><span class="errorpasswd"><?=$errorpasswd;?></span><br /><br />
+            <label>Nueva Contrasena:</label> <input type="text" size="30" maxlength="100" name="novacontrasena" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_REQUEST["novacontrasena"];?>" required /><span class="errorpasswd"><?=$errorpasswd;?></span><br /><br />
 
             <button id="mysubmit" type="submit">Crear Usuario</button>
 
