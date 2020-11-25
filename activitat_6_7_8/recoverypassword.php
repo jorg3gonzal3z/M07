@@ -90,7 +90,7 @@ if(userExists($_REQUEST["email"])){
 
                                 // Set email format to HTML
 
-        $linkmastoken = "https://dawjavi.insjoaquimmir.cat/jgonzalez/M07/activitat_6_i_7/editpassword.php?token_recovery=".$_SESSION['Token_recovery'];
+        $linkmastoken = "https://dawjavi.insjoaquimmir.cat/jgonzalez/M07/activitat_6_7_8/editpassword.php?token_recovery=".$_SESSION['Token_recovery'];
 
         $mail->Body    = "Canvia la contrasenya amb aquest link: <b><a href= $linkmastoken>Formulari De Recuperació</a></b>";
 
