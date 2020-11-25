@@ -25,8 +25,8 @@ $checkout_session = \Stripe\Checkout\Session::create([
   ]],
   'mode' => 'payment',
   //paginas de mi server_javi a las que redirigo en estos casos//
-  'success_url' => $YOUR_DOMAIN . '/jgonzalez/M07/activitat_6/success.php?token='.$_SESSION["Token"],//si el pago es correcto
-  'cancel_url' => $YOUR_DOMAIN . '/jgonzalez/M07/activitat_6/cancel.php',//si hay algun tipo de error
+  'success_url' => $YOUR_DOMAIN . '/jgonzalez/M07/activitat_6_7_8/success.php?token='.$_SESSION["Token"],//si el pago es correcto
+  'cancel_url' => $YOUR_DOMAIN . '/jgonzalez/M07/activitat_6_7_8/cancel.php',//si hay algun tipo de error
 ]);
 
 echo json_encode(['id' => $checkout_session->id]);
