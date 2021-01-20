@@ -18,7 +18,10 @@ Llistat de Usuaris:<a class="float-right" style="color:blue;" href="{{url('/nou_
 
   <div class="p-6 bg-white border-b border-gray-200">   
     <ul>
-      <li>{{ $user->name }}, {{ $user->email }} <a href="{{ url('/nou_usuari/info',['id' => $user->id] )}}" class="float-right fas fa-info"></a> </li>
+      <li>{{ $user->name }}, {{ $user->email }}</li>
+      <li><a href="{{ url('/nou_usuari',['id' => $user->id ]) }}" class="fas fa-info"></a></li>
+      <li><a href="{{ route('user.destroy_user', [ 'id'=> $user->id ]) }}" class=" fas fa-trash-alt"  ></a></li>
+      
   </div>
 
 @endforeach

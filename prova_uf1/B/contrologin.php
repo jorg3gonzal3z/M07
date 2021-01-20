@@ -5,7 +5,7 @@ session_start();
 if(isset($_REQUEST["logout"])){
 
     $_SESSION=null;
-     
+    
     session_destroy();
 
 }

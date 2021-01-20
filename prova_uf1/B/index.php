@@ -1,4 +1,5 @@
 <?php
+$erroremail="";
 $errormsgpass="";
 $erroremail2="";
 $errormsgpass2="";
@@ -15,6 +16,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty($_REQUEST["username"])){ 
         $error=TRUE;
         $erroremail2= "Email buit";
+    }
+
+    else if (!filter_var($username, FILTER_VALIDATE_EMAIL)) {
+        $error=TRUE;
+        $erroremail= "Invalid format de email ";
     }
 
     if (!preg_match("/^[a-zA-Z0-9' ]*$/",$password)) {
@@ -75,6 +81,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
 <h1>Formulari login</h1>
+<h4><?=$erroremail?></h4>
 <h4><?=$erroremail2?></h4>
 <h4><?=$errormsgpass2?></h4>
 <h4><?=$errormsgpass?></h4>
@@ -84,7 +91,7 @@ $num_2 = 4;
 $resultado_suma = $num_1 + $num_2;
 ?>
 <form method="post">
-    username:<input type="text" name="username" id=""><br>
+    email:<input type="text" name="username" id=""><br>
     password: <input type="password" name="password" id=""><br><br>
     <input type="submit" value="Envia"><br><br>
     

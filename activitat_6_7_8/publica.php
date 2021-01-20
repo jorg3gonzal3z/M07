@@ -66,7 +66,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'&&!isset($_REQUEST["buscar"])) {
                     setcookie('password', md5($_REQUEST["password"]), time() + 365*24*60*60,'/'); 
                 }
 
-                header('location:privada.php');
+                header('location:home.php');
     
             }else{
     

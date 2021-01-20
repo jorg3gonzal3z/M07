@@ -20,13 +20,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*inici de la pagina*/
 Route::get('/prova', [ProvaController::class, 'prova'])->middleware(['auth']);
 
+/*usuaris*/
+/*create*/
 Route::get('/nou_usuari', [UserController::class, 'nou'])->middleware(['auth']);
 Route::post('/nou_usuari/nou', [UserController::class, 'store'])->middleware(['auth']);
+/*show_no funciona*/
+Route::get('/nou_usuari/{id}', [UserController::class, 'show'])->middleware(['auth']);
+/*delete*/
+Route::delete('/destroy_user/{id}', [UserController::class, 'destroy'])->middleware(['auth'])->name('user.destroy_user');
 
-Route::get('/nou_usuari/info/{id}', [UserController::class, 'show'])->middleware(['auth']);
 
+/*email*/
 Route::get('/send/email', [MailController::class, 'mail'])->middleware(['auth']);
 
 Route::get('/dashboard', function () {

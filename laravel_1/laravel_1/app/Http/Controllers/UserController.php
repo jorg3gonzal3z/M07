@@ -33,11 +33,20 @@ class UserController extends Controller
         //return Redirect::to('prova')->with('notice', 'El usuario ha sigut creat correctament.');
     }
 
-    public function show($id)
+    public function show(Request $id)
     {
-        dd($id);
+        
         $users = User::find($id);
 
         return view('info_usuari', compact('users'));
+    }
+
+    public function destroy(Request $id)
+    {
+        $usuario = User::findOrFail($id);
+        if ($usuario->delete())
+            return redirect()->route('users.index')->withSuccess("El usuario se ha eliminado correctamente.");
+        else
+            return redirect()->route('users.index')->withWarning("Error al eliminar el usuario.");
     }
 }

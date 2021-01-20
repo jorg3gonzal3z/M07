@@ -58,8 +58,8 @@ if(userExists($_REQUEST["username"])){
 
 
     //Set who the message is to be sent to
-    $email_completo = 'jgonzalezg@fp.insjoaquimmir.cat';
-    $mail->addAddress($email_completo);
+    
+    $mail->addAddress($_REQUEST["username"]);
 
 
 
