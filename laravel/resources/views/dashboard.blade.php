@@ -12,7 +12,10 @@
                     <a href="{{ route('formulari') }}" >Formulari</a>
                 </div>
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <a href="{{ route('crud') }}" >CRUD</a>
+                    <a href="{{ route('crud') }}" >CRUD Llibreria</a>
+                </div>
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <a href="{{ route('mascotas.index') }}">CRUD Mascotas 30'</a>
                 </div>
             </div>
         </div>

@@ -46,3 +46,6 @@ Route::get('/crud/edit/{id}', [CrudController::class, 'edit'])->middleware(['aut
 Route::put('/crud/edit/{id}', [CrudController::class, 'update'])->middleware(['auth'])->name('libro.update');
 
 require __DIR__.'/auth.php';
+
+
+Route::resource('mascotas', App\Http\Controllers\MascotaController::class);

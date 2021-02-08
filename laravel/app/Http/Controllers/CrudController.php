@@ -10,7 +10,6 @@ class CrudController extends Controller
     public function form()
     {
         $libros=Libro::orderBy('id','DESC')->paginate(3);
-        
         return view('crud',compact('libros')); 
     }
     public function show($id)
