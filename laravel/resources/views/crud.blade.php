@@ -38,4 +38,4 @@
     </div
 
 
-@endsection
+@stop
